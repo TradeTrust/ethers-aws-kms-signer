@@ -1,10 +1,9 @@
-import { UnsignedTransaction } from "ethers";
 import { arrayify, Bytes, joinSignature } from "@ethersproject/bytes";
 import { Signer } from "@ethersproject/abstract-signer";
 import { Provider, TransactionRequest } from "@ethersproject/abstract-provider";
 import { Deferrable, defineReadOnly, resolveProperties } from "@ethersproject/properties";
 import { keccak256 } from "@ethersproject/keccak256";
-import { serialize as serializeTransaction } from "@ethersproject/transactions";
+import { serialize as serializeTransaction, UnsignedTransaction } from "@ethersproject/transactions";
 
 import { hashMessage } from "@ethersproject/hash";
 import { getPublicKey, getEthereumAddress, requestKmsSignature, determineCorrectV } from "./util/aws-kms-utils";
