@@ -1,7 +1,8 @@
-import { ethers } from "ethers";
 import { KMSClient, SignCommand, GetPublicKeyCommand } from "@aws-sdk/client-kms";
 import * as asn1 from "asn1.js";
 import BN from "bn.js";
+import { keccak256 } from "@ethersproject/keccak256";
+import { recoverAddress } from "@ethersproject/transactions";
 import { AwsKmsSignerCredentials } from "../index";
 
 /* this asn1.js library has some funky things going on */
@@ -54,7 +55,7 @@ export function getEthereumAddress(publicKey: Buffer): string {
   // The public key starts with a 0x04 prefix that needs to be removed
   // more info: https://www.oreilly.com/library/view/mastering-ethereum/9781491971932/ch04.html
   pubKeyBuffer = pubKeyBuffer.slice(1, pubKeyBuffer.length);
-  const address = ethers.utils.keccak256(pubKeyBuffer); // keccak256 hash of publicKey
+  const address = keccak256(pubKeyBuffer); // keccak256 hash of publicKey
   const EthAddr = `0x${address.slice(-40)}`; // take last 20 bytes as ethereum adress
 
   return EthAddr;
@@ -87,7 +88,7 @@ export async function requestKmsSignature(plaintext: Buffer, kmsCredentials: Aws
 }
 
 function recoverPubKeyFromSig(msg: Buffer, r: BN, s: BN, v: number) {
-  return ethers.utils.recoverAddress(`0x${msg.toString("hex")}`, {
+  return recoverAddress(`0x${msg.toString("hex")}`, {
     r: `0x${r.toString("hex")}`,
     s: `0x${s.toString("hex")}`,
     v,
