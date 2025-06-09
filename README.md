@@ -6,13 +6,13 @@ For GCP KMS look [here](https://github.com/openlawteam/ethers-gcp-kms-signer)
 ## Getting Started
 
 ```sh
-npm i ethers-aws-kms-signer
+npm i @tradetrust-tt/ethers-aws-kms-signer
 ```
 
 You can provide the AWS Credentials using the various ways listed [here](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html) depending on how you are using this library. You can also explicitly specify them when invoking the `AwsKmsSigner` constructor as shown below.
 
 ```js
-import { AwsKmsSigner } from "ethers-aws-kms-signer";
+import { AwsKmsSigner } from "@tradetrust-tt/ethers-aws-kms-signer";
 
 const kmsCredentials = {
   accessKeyId: "AKIAxxxxxxxxxxxxxxxx", // credentials for your IAM user with KMS access
@@ -36,8 +36,8 @@ console.log(tx);
  `git clone` this repo
 
 ```sh
-$ git clone https://github.com/rjchow/nod my-module
-$ cd my-module
+$ git clone https://github.com/TradeTrust/ethers-aws-kms-signer.git
+$ cd ethers-aws-kms-signer
 $ rm -rf .git
 $ npm install # or yarn
 ```
@@ -67,15 +67,10 @@ DEBUG="PLACEHOLDER_PROJECT_NAME:*" npm run dev
 
 This boiler plate uses the **semantic-release** package to manage versioning. Once it has been set up, version numbers and Github release changelogs will be automatically managed. **semantic-release** uses the commit messages to determine the type of changes in the codebase. Following formalized conventions for commit messages, **semantic-release** automatically determines the next [semantic version](https://semver.org) number, generates a changelog and publishes the release.
 
-Use `npm run commit` instead of `git commit` in order to invoke Commitizen commit helper that helps with writing properly formatted commit messages.
-
-
-## License
-
-MIT © [RJ Chow](https://github.com/rjchow)
-
 
 # Credits
+
+This project is a fork of [Open-Attestation/ethers-aws-kms-signer](https://github.com/Open-Attestation/ethers-aws-kms-signer). We thank them for their original work.
 
 Utmost credit goes to Lucas Henning for doing the legwork on parsing the AWS KMS signature and public key asn formats: https://luhenning.medium.com/the-dark-side-of-the-elliptic-curve-signing-ethereum-transactions-with-aws-kms-in-javascript-83610d9a6f81
 
