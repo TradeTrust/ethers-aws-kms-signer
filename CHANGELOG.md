@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/TradeTrust/ethers-aws-kms-signer/compare/v2.1.2...v2.1.3) (2025-06-09)
+
+
+### Bug Fixes
+
+* update release ([17ac788](https://github.com/TradeTrust/ethers-aws-kms-signer/commit/17ac788fde06a3320518ddeb0004568b598b52bc))
+
 ## [1.3.2](https://github.com/rjchow/ethers-aws-kms-signer/compare/v1.3.1...v1.3.2) (2021-07-14)
 
 
