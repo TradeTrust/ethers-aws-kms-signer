@@ -48,7 +48,7 @@
     "tradetrust"
   ],
   "dependencies": {
-    "@aws-sdk/client-kms": "^3.826.0",
+    "@aws-sdk/client-kms": "^3.830.0",
     "@ethersproject/abstract-provider": "^5.8.0",
     "@ethersproject/abstract-signer": "^5.8.0",
     "@ethersproject/bytes": "^5.8.0",
@@ -56,9 +56,8 @@
     "@ethersproject/keccak256": "^5.8.0",
     "@ethersproject/properties": "^5.8.0",
     "@ethersproject/transactions": "^5.8.0",
-    "@types/node": "^18.19.111",
+    "@types/node": "^18.19.112",
     "asn1.js": "^5.4.1",
-    "aws-sdk": "^2.1692.0",
     "bn.js": "^5.2.2",
     "debug": "^4.4.1"
   },
