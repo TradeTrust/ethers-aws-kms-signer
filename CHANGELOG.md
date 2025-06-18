@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/TradeTrust/ethers-aws-kms-signer/compare/v2.1.3...v2.1.4) (2025-06-18)
+
+
+### Bug Fixes
+
+* remove unused package dependencies ([#1](https://github.com/TradeTrust/ethers-aws-kms-signer/issues/1)) ([047c4ff](https://github.com/TradeTrust/ethers-aws-kms-signer/commit/047c4ffb7918ab60964e4275badc63394d66e9f8))
+
 ## [2.1.3](https://github.com/TradeTrust/ethers-aws-kms-signer/compare/v2.1.2...v2.1.3) (2025-06-09)
 
 
